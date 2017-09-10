@@ -1,0 +1,124 @@
+/* webfonts */
+
+@font-face {
+    font-family: 'fortescue-regular';
+    src: url('../webfonts/fortescue-regular.eot');
+    src: url('../webfonts/fortescue-regular.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/fortescue-regular.woff') format('woff'),
+         url('../webfonts/fortescue-regular.woff2') format('woff2'),
+         url('../webfonts/fortescue-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+   font-family: 'fortescue-semibold';
+   src: url('../webfonts/fortescue-semibold.eot');
+   src: url('../webfonts/fortescue-semibold.eot?#iefix') format('embedded-opentype'),
+        url('../webfonts/fortescue-semibold.woff') format('woff'),
+        url('../webfonts/fortescue-semibold.woff2') format('woff2'),
+        url('../webfonts/fortescue-semibold.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+
+}
+
+/* main styles */
+
+
+body {
+  background-color: black;
+  color: #D9B794;
+  font-family: 'fortescue-regular', serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #86694B;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+img {
+  width: 110px;
+  height: 110px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.contact {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.contact h2 {
+  color: #7B6B5B;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #D9B794;
+  font-size: 24px;
+  margin-top: 25px;
+  transition: 0.3s;
+  display: inline-block;
+  border: 1px solid #5B4B3B;
+  border-radius: 100px;
+  padding: 15px 40px;
+}
+
+.contact a:hover {
+  color: black;
+  background-color: #D39768;
+  border-color: #D39768;
+}
+
+.contact p {
+  margin-top: 30px;
+}
+
+.contact p span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #86694B;
+}
+
+.line {
+  border-bottom: 1px solid #86694B;
+  color: #86694B;
+  padding-bottom: 40px;
+  font-size: 18px;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    top: 50px;
+  }
+
+  .contact {
+    bottom: 50px;
+  }
+
+  .contact p span {
+    display: block;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+}
