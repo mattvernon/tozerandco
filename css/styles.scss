@@ -1,0 +1,274 @@
+/* webfonts */
+
+@font-face {
+    font-family: 'fortescue-regular';
+    src: url('../webfonts/fortescue-regular.eot');
+    src: url('../webfonts/fortescue-regular.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/fortescue-regular.woff') format('woff'),
+         url('../webfonts/fortescue-regular.woff2') format('woff2'),
+         url('../webfonts/fortescue-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+   font-family: 'fortescue-semibold';
+   src: url('../webfonts/fortescue-semibold.eot');
+   src: url('../webfonts/fortescue-semibold.eot?#iefix') format('embedded-opentype'),
+        url('../webfonts/fortescue-semibold.woff') format('woff'),
+        url('../webfonts/fortescue-semibold.woff2') format('woff2'),
+        url('../webfonts/fortescue-semibold.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+
+}
+
+// Media queries
+
+@mixin small {
+  @media (max-width: 680px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (max-width: 1150px) {
+    @content;
+  }
+}
+
+
+@mixin large {
+  @media (min-width: 1151px) {
+    @content;
+  }
+}
+
+/* main styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0D0D0D;
+  color: #D9B794;
+  font-family: 'fortescue-regular', serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  padding: 80px 100px;
+  outline: none;
+
+  @include small {
+      padding: 50px 60px;
+    }
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include small {
+      align-items: center;
+    }
+}
+
+h1 {
+  font-family: 'fortescue-regular', serif;
+  font-weight: 400;
+  font-size: 86px;
+  letter-spacing: -2px;
+  color: #FFAB78;
+  max-width: 490px;
+  line-height: 1;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 36px;
+  color: #946244;
+}
+
+nav a {
+  color: #FFAB78;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 30px;
+  font-size: 14px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#intro {
+  @include small {
+    align-items: center;
+      text-align: center;
+    }
+
+  nav {
+    @include small {
+        display: none;
+      }
+  }
+
+  header {
+    @include small {
+        justify-content: center;
+      }
+  }
+}
+
+#focus {
+  background-color: #191919;
+  @include small {
+      height: auto;
+    }
+}
+
+.focus-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  h2 {
+    margin-right: 30px;
+    min-width: 560px;
+    @include small {
+        min-width: 0;
+      }
+  }
+
+  .border-line {
+    height: 2px;
+    background-color: #553827;
+    width: 100%;
+    @include small {
+        display: none;
+      }
+  }
+}
+
+.focus-content {
+  width: 100%;
+  display: flex;
+
+  @include small {
+      flex-direction: column;
+    }
+
+  div {
+    max-width: 520px;
+    margin-right: 80px;
+
+    @include small {
+        margin: 0;
+      }
+
+    h3 {
+      color: #B58568;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 14px;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 20px;
+      color: #B58568
+    }
+  }
+
+  div:first-child {
+    @include small {
+        margin-bottom: 30px;
+      }
+  }
+}
+
+#contact {
+
+  h2 {
+    font-size: 56px;
+    margin-top: 0;
+  }
+
+  .contact-form {
+    max-width: 600px;
+  }
+
+  @include small {
+      height: auto;
+    }
+}
+
+input,
+textarea {
+  width: 100%;
+  background-color: #0D0D0D;
+  outline: none;
+}
+
+input[type=text],
+input[type=email] {
+  border: none;
+  border-bottom: 1px solid #AB7656;
+  height: 60px;
+}
+
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+textarea::placeholder {
+  color: #AB7656;
+}
+
+textarea {
+  min-height: 300px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #AB7656;
+  padding: 20px 25px;
+}
+
+textarea:active,
+textarea:focus {
+  border: 2px solid #AB7656;
+}
+
+input[type=text]:active,
+input[type=text]:focus,
+input[type=email]:active,
+input[type=email]:focus {
+  border-bottom: 2px solid #AB7656;
+}
+
+.button {
+  border: 1px solid #AB7656;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  padding: 30px;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background-color: #AB7656;
+  color: #0D0D0D;
+}

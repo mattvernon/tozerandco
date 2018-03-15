@@ -10,26 +10,84 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <h1>Tozer and Co.</h1>
-        <img src="img/circle_gold.png" class="logo">
-        <div class="contact">
-          <!-- <p class="line">Contact – dt@tozerandco.com</p> -->
-          <p><span>Invest</span><span>Transform</span><span>Board &amp; Management</span></p>
+    <body data-hijacking="off" data-animation="fixed">
+
+      <section id="intro" class="cd-section visible">
+        <div class="content">
+          <header>
+            <h2 class="logo">
+              <img src="img/logo.svg">
+            </h2>
+            <nav>
+              <a href="#focus">Family Office</a>
+              <a href="#focus">Institutional</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </header>
+          <h1>Welcome to Tozer and Co.</h1>
+          <a href="#focus"><img src="img/arrow.svg"></a>
         </div>
+      </section>
+
+      <section id="focus" class="cd-section">
+        <div class="content">
+          <div class="focus-header">
+            <h2>We are a family office focussed on</h2>
+            <div class="border-line"></div>
+          </div>
+          <div class="focus-content">
+            <div class="family">
+              <h3>Family Office</h3>
+              <p>We invest and support founders, entrepreneurs and retiring founders. We are creative and aim to provide a solution covering your financial and non-financial objectives.</p>
+              <p>Historically have invested in control and non-control situations.</p>
+              <p>We have a long standing reputation for acting with integrity and doing the right thing by our partners.</p>
+            </div>
+            <div class="institutional">
+              <h3>Institutional</h3>
+              <p>Our institutional focus is to cover stressed, distressed and special situations investments in public and private markets.</p>
+              <p>We have exclusive relationships with selected institutional investors to co-invest in local Australian and New Zealand opportunities.</p>
+              <p>We will act with a high degree of integrity, be creative and flexible, and deliver on our family office approach of acting locally and protection our family office reputation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="content">
+          <h2>Contact Us</h2>
+          <div class="contact-form">
+            <form action="https://formspree.io/help@hydroshield.com.au" method="post">
+              <div>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                <input type="email" id="email" name="email" placeholder="Email Address">
+                <input type="text" id="subject" name="subject" placeholder="Subject">
+                <textarea name="summary" placeholder="Message"></textarea>
+              </div>
+              <input type="submit" value="Send" class="button square">
+            </form>
+          </div>
+        </div>
+      </section>
 
 
 
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/velocity.min.js"></script>
+        <script src="js/velocity.ui.min.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
